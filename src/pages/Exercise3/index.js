@@ -1,18 +1,24 @@
 import { useState } from "react";
 
 const Exercise3 = () => {
+  // Creation of state to manage inputs and output
   const [numberToPower, setNumberToPower] = useState(0);
   const [power, setPower] = useState(1);
   const [result, setResult] = useState();
 
+  // Algorithm to manage the power operation
   const handleGetPowerResult = () => {
+    // Here I create an acommulator o do the product of the operation.
     let tempResult = numberToPower;
+    // Loop to do the operation one by one.
     for(let i = 1; i < power; i++) {
       tempResult *= numberToPower;
     }
 
+    // Set the result
     setResult(tempResult);
   }
+
   return (
     <div>
       <h2>Exercise 3</h2>
