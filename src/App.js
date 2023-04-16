@@ -3,6 +3,7 @@ import './App.css';
 import Layout from './components/Layout';
 import Home from './pages/Home'
 import Exercise1 from './pages/Exercise1';
+import Exercise2 from './pages/Exercise2';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     <h1>Unidad 2:</h1>
       <Routes>
         <Route path="exercise-1" element={<Exercise1 />} />
+        <Route path="exercise-2" element={<Exercise2 />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Layout>
