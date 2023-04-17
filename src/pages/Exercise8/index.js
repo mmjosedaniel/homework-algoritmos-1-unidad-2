@@ -18,27 +18,33 @@ const Exercise8 = () => {
 	    }
 	  }
 
-    // here I create a new Matrix
-    const newMatrix = [];
-    for(let i = 0; i < lengthOfTheMatrixN; i++) {
-      newMatrix[i] = matrix[i].slice();
-    }
-
     // Here I show the lod matrix
     console.log("Matrix before aplying value D: ", matrix);
+
     
-	  // A loop to pass through each element in the matrix 
-	  for(let i = 0; i < lengthOfTheMatrixN; i++) {
-	    for(let j = 0; j < lengthOfTheMatrixM; j++) {
-        // Multiply the element by valueD
-        newMatrix[i][j] *= valueD
-	    };
-	  };
-	  
+	  const newMatrix = getNewMatrix(matrix, lengthOfTheMatrixN, lengthOfTheMatrixM, valueD)
       
 	  // Here I show the result
 	  console.log("result: ", newMatrix);
 	};
+
+  function getNewMatrix (oldMatrix, lengthN, LengthM, valueD) {
+    // here I create a new Matrix
+    const newMatrix = [];
+    for(let i = 0; i < lengthN; i++) {
+      newMatrix[i] = oldMatrix[i].slice();
+    }
+   
+	  // A loop to pass through each element in the matrix 
+	  for(let i = 0; i < lengthN; i++) {
+	    for(let j = 0; j < LengthM; j++) {
+        // Multiply the element by valueD
+        newMatrix[i][j] *= valueD
+	    };
+	  };
+
+    return newMatrix;
+  }
       
 	// A funtion to get a random number from 4 to 9.
 	function randomIntFromFourToNine() {
