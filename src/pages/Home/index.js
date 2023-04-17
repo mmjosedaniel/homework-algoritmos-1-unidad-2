@@ -16,6 +16,10 @@ const Home = () => {
         <li>
           <Link to="exercise-3">Exercise 3</Link>
         </li>
+
+        <li>
+          <Link to="exercise-4">Exercise 4</Link>
+        </li>
       </ul>
     </Fragment>
   );
